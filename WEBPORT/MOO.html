@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        JumDeng
+    </title>
+
+    <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+        }
+
+        #full-screen-background-image {
+            z-index: -999;
+            min-height: 100%;
+            min-width: 1024px;
+            width: 100%;
+            height: auto;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        #wrapper {
+            position: relative;
+            width: 800px;
+            min-height: 400px;
+            margin: 100px auto;
+            color: #333;
+        }
+
+        h1 {
+            
+            text-shadow: 0 0 0.2em rgb(0, 0, 0),
+                0 0 0.2em rgb(255, 255, 255),
+                0 0 0.2em rgb(255, 255, 255);
+        }
+
+        h2 {
+            text-shadow: 0 0 0.2em rgb(255, 255, 255),
+                0 0 0.2em rgb(255, 255, 255),
+                0 0 0.2em rgb(255, 254, 254);
+            margin-top: 50px; 
+        }
+
+        #pic {
+            display: flex;               
+            justify-content: flex-start; 
+            align-items: center;         
+            width: 300px;                
+            height: 299px;               
+            margin: 0 auto;              
+            padding-left: -50px;         
+        }
+
+        #MOO {
+            width: 100%;
+            height: auto; 
+            margin-left: -30px;
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body onclick="pop()" onload="changePic()">
+
+    <audio id="music">
+        <source src="PopSound.mp3" type="audio/mpeg">
+    </audio>
+
+    <img alt="full screen background image" src="image/Untitled.jpg" id="full-screen-background-image">
+
+    <div style="position:absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <h1 align="center">JumpolDeng</h1>
+        <div align="center">
+            <div id="pic">
+                <img id="MOO" src="image/New Project (1).png" alt="MOO">
+            </div>
+        </div>
+        <h2 align="center" id="point"></h2>
+    </div>
+</body>
+
+</html>
